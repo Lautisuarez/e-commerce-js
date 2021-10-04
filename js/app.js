@@ -44,6 +44,11 @@ class User{
         }
     }
     showCart(){
+        /* Ordenamos al array de menor a mayor por su precio para el desafío */
+        this.cart.sort(function (a,b){
+            return (a.price - b.price)
+        })
+        console.log(this.cart) /* Mostramos que el array esta ordenado por su precio de menor a mayor */
         for (const prod of this.cart) {
             prod.showProductUser()
         }  
