@@ -1,16 +1,163 @@
+/* -------------------- VARIABLES -------------------- */
+/* COLORES */
+$color-main: #F1F6F9;
+$color-secondary: #30475E;
+$color-tertiary: #F05454;/* #F05454 */
+/* TAMAÑO LETRAS */
+$txt-normal: 2rem;
+$txt-title: 2.2rem;
+$txt-btn: 1.5rem;
+$txt-paragraph: 1.3rem;
+
+/* -------------------- MIXIN -------------------- */
+@mixin flex($status, $direction, $justify: space-between, $wrap: wrap, $align: center) {
+    // Realiza un display en flex
+    // $status = Verifica si es necesario definir el display
+    // $direction = Dirección del flex
+    // $justify = Establece la posición del justify-content, por defecto es space-between
+    // $wrap = Establece si no es necesario hacer wrap, ya que por defecto es wrap
+    // $align = Establece la alineación del elemento, por defecto es center
+    @if $status {
+        display: flex;
+    }
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+@mixin img($name, $att) {
+    // Establecemos todos los atributos para imagenes
+    // $name = Nombre de la imagen
+    // $att = Atributo attachment para los efectos parallax
+    background-image: url('../img/'+$name);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: $att;
+}
+
+/* -------------------- RESET -------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
+/* -------------------- GLOBALES -------------------- */
 html {
     font-size: 62.5%; /* 1rem = 10px */
 }
 body {
-    background-color: #112031;
+    background-color: $color-main;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
 }
-h1 {
-    color: white;
-    font-size: 5rem;
+a {
+    text-decoration: none;
+    color: $color-main;
 }
+
+/* -------------------- UTILIDADES -------------------- */
+.container {
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    background-color: $color-secondary;
+    > div {
+        @include flex(true, row);
+        height: 10vh;
+    }
+}
+nav {
+    width: 60%;
+    ul {
+        @include flex(true, row, space-between);
+        transform: translate(0px, -150%);
+        &.is_active {
+            transform: translate(0px, 0px);
+            transition: transform 1s;
+        }
+        li {
+            list-style: none;
+            a {
+                font-size: $txt-normal;
+                color: $color-main;
+                padding: 1.2rem;
+                border-radius: 1.5rem;
+                transition: .3s all;
+                &:hover {
+                    color: $color-main - 70;
+                }
+                &.actived{
+                    background-color: $color-tertiary;
+                    &:hover {
+                        background-color: $color-tertiary - 70;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ÍCONO DE MENÚ */
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: $color-tertiary;
+    margin: 6px 0;
+    transition: .4s all;
+}
+.bar2 {
+    width: 30px;
+}
+.menuHamburguesa {
+    padding: 1rem;
+    &.is-active{
+        .bar1 { transform: translateY(150%) rotate(45deg); }
+        .bar2 { opacity: 0; }
+        .bar3 { transform: translateY(-350%) rotate(135deg); }
+    }
+}
+
+@media (max-width: 768px){ /* Creamos un mq únicamente para la navegacion */
+    nav ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        @include flex(true, column, center);
+        row-gap: 5rem;
+        background-color: rgba(27, 23, 23, .9);
+    }
+}
+@media (min-width: 768px){
+    .menuHamburguesa {
+        display: none;
+    }
+    nav {
+        ul {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: $color-secondary;
+    padding: 3rem 0;
+    div {
+        @include flex(true, row);
+        h2 {
+            color: $color-main;
+        }
+        p {
+            font-size: $txt-normal;
+            color: $color-main;
+        }
+    }
+}
+
+/* -------------------- PÁGINA INICIO -------------------- */
