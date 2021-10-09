@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
+    <title>Tienda OnLine</title>
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- -------------------- HEADER -------------------- -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="/img/logo.svg" alt="Logo"></a>
+                <a href="/index.html"><img src="/img/logo.svg" alt="Logo"></a>
             </div>
             <nav>
                 <ul class="navegacion">
@@ -36,13 +37,106 @@
         </div>
     </header>
 
+    <!-- -------------------- CUERPO -------------------- -->
+    <div class="container tienda">
+        <h1 style="text-align: center; font-size: 3rem;">Tienda OnLine</h1>
+        <div class="products">
+            <h2>Productos</h2>
+            <div class="container type-product">
+                <article>
+                    <img src="/img/productos/sweater.webp" alt="Imagén de un sweater negro">
+                    <div>
+                        <h3>Sweater negro</h3>
+                        <p>$2.690</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+                <article>
+                    <img src="/img/productos/campera.webp" alt="Imagén de una campera rosa">
+                    <div>
+                        <h3>Campera rosa</h3>
+                        <p>$6.239</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+                <article>
+                    <img src="/img/productos/campera-nieve.webp" alt="Imagén de una campera para nieve">
+                    <div>
+                        <h3>Campera para Nieve</h3>
+                        <p>$21.450</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+                <article>
+                    <img src="/img/productos/campera-negra-topper.webp" alt="Imagén de una campera negra Topper">
+                    <div>
+                        <h3>Campera negra Topper</h3>
+                        <p>$6.239</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+                <article>
+                    <img src="/img/productos/mochila-negra-nike.webp" alt="Imagén de una mochila negra Nike">
+                    <div>
+                        <h3>Mochila negra Nike</h3>
+                        <p>$6.500</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+                <article>
+                    <img src="/img/productos/remera-rosa-topper.webp" alt="Imagén de una remera rosa Topper">
+                    <div>
+                        <h3>Remera rosa Topper</h3>
+                        <p>$1.500</p>
+                    </div>
+                    <form action="GET">
+                        <div>
+                            <label for="cantidad">Cantidad: </label>
+                            <input type="number" name="cantidad" id="cantidad" min="0">
+                        </div>
+                        <input type="button" value="Comprar" class="btn btn-primary">
+                    </form>
+                </article>
+            </div>
+        </div>
+    </div>
 
-
+    <!-- -------------------- FOOTER -------------------- -->
     <footer>
         <div class="container">
             <p>Desarrollado por: <b>Lautaro Suárez</b></p>
             <div class="logo">
-                <a href="#"><img src="/img/logo.svg" alt="Logo"></a>
+                <a href="/index.html"><img src="/img/logo.svg" alt="Logo"></a>
             </div>
             <p>Copyright&copy;</p>
         </div>
