@@ -71,6 +71,10 @@ header {
         height: 10vh;
     }
 }
+.logo a img{
+    width: 90px;
+    height: 90px;
+}
 nav {
     width: 60%;
     ul {
@@ -150,9 +154,6 @@ footer {
     padding: 3rem 0;
     div {
         @include flex(true, row);
-        h2 {
-            color: $color-main;
-        }
         p {
             font-size: $txt-normal;
             color: $color-main;

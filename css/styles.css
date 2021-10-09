@@ -60,6 +60,11 @@ header > div {
   height: 10vh;
 }
 
+.logo a img {
+  width: 90px;
+  height: 90px;
+}
+
 nav {
   width: 60%;
 }
@@ -210,10 +215,6 @@ footer div {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-footer div h2 {
-  color: #F1F6F9;
 }
 
 footer div p {
