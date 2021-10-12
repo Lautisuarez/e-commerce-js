@@ -1,7 +1,6 @@
 # Ecommerce
-_Ecommerce sobre venta de indumentaria. _
-_Desarrollado como proyecto para CoderHouse._
-**Comision 22550**
+_Maquetado de un ecommerce sobre venta de indumentaria. _
+_Desarrollado como proyecto personal._
 
 ## Sitio web 🌐
 <a href="https://lautisuarez.github.io/e-commerce-js/" target="_blank">Ecommerce</a>
@@ -18,3 +17,6 @@ git clone https://github.com/Lautisuarez/e-commerce-js.git
 
 ## Autor ✒️
 **Lautaro Suárez** - [Github](https://github.com/Lautisuarez)
+
+## Captura 📸
+<img src="/img/captura.png" alt="Captura de pantalla del sitio web">

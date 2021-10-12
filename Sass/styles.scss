@@ -2,12 +2,27 @@
 /* COLORES */
 $color-main: #F1F6F9;
 $color-secondary: #30475E;
-$color-tertiary: #F05454;/* #F05454 */
+$color-tertiary: #F05454;
 /* TAMAÑO LETRAS */
 $txt-normal: 2rem;
 $txt-title: 2.2rem;
 $txt-btn: 1.5rem;
 $txt-paragraph: 1.3rem;
+
+@media (min-width:468px) {
+    /* TAMAÑO LETRAS */
+    $txt-normal: 1.8rem;
+    $txt-title: 2rem;
+    $txt-btn: 1.3rem;
+    $txt-paragraph: 1.1rem;
+}
+@media (min-width:768px) {
+    /* TAMAÑO LETRAS */
+    $txt-normal: 2rem;
+    $txt-title: 2.2rem;
+    $txt-btn: 1.5rem;
+    $txt-paragraph: 1.3rem;
+}
 
 /* -------------------- MIXIN -------------------- */
 @mixin flex($status, $direction, $justify: space-between, $wrap: wrap, $align: center) {

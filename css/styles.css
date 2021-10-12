@@ -1,8 +1,15 @@
 @charset "UTF-8";
 /* -------------------- VARIABLES -------------------- */
 /* COLORES */
-/* #F05454 */
 /* TAMAÑO LETRAS */
+@media (min-width: 468px) {
+  /* TAMAÑO LETRAS */
+}
+
+@media (min-width: 768px) {
+  /* TAMAÑO LETRAS */
+}
+
 /* -------------------- MIXIN -------------------- */
 /* -------------------- RESET -------------------- */
 * {
